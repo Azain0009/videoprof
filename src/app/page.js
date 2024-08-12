@@ -45,24 +45,25 @@ export default function Home() {
         }
       `}</style>
       <div className="bg-[#020410] text-white">
-        <header className="py-32 h-screen flex items-center px-4 relative" data-aos="fade-up">
-          <div className="absolute inset-0 flex justify-center items-center -z-10">
-            <div className="absolute left-1/4 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-radial"></div>
-          </div>
-          <div className="w-full max-w-screen-xl mx-auto text-center relative">
-            <div className="w-full px-2 md:text-left">
-              <h1 className={`text-3xl md:text-9xl text-white scroll-slide ${headerInView ? 'show' : ''}`} ref={headerRef}>
-                Azain Akil
-              </h1>
-              <p className={`text-3xl mb-8 md:text-3xl mt-4 text-white scroll-slide ${headerInView ? 'show' : ''}`}>
-                I craft bespoke video edits for individuals and brands
-              </p>
-              <a href="mailto:azainxc@gmail.com" className="mt-6 inline-block rounded-lg bg-white text-black p-3 transition-transform duration-300 ease-in-out transform hover:bg-black hover:text-white hover:scale-110" data-aos="fade-up" data-aos-delay="400">
-                Let&apos;s Collaborate
-              </a>
-            </div>
-          </div>
-        </header>
+      <header className="py-32 h-screen flex items-center px-4 relative" data-aos="fade-up">
+  <div className="absolute inset-0 flex justify-center items-center -z-10">
+    <div className="absolute left-1/4 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-radial"></div>
+  </div>
+  <div className="w-full max-w-screen-xl mx-auto text-center relative">
+    <div className="w-full px-2 md:text-left">
+      <h1 className={`text-3xl md:text-9xl text-white scroll-slide ${headerInView ? 'show' : ''}`} ref={headerRef}>
+        Azain Akil
+      </h1>
+      <p className={`text-3xl mb-8 md:text-3xl mt-4 text-white scroll-slide ${headerInView ? 'show' : ''}`}>
+        I craft bespoke video edits for individuals and brands
+      </p>
+      <a href="mailto:azainxc@gmail.com" className="mt-6 inline-block rounded-lg bg-white text-black p-3 transition-transform duration-300 ease-in-out transform hover:bg-black hover:text-white hover:scale-110" data-aos="fade-up" data-aos-delay="400">
+        Let&apos;s Collaborate
+      </a>
+    </div>
+  </div>
+</header>
+
 
         <section className="py-32" data-aos="fade-up">
           <div className="container mx-auto px-4 text-center">
@@ -96,7 +97,7 @@ export default function Home() {
             <p className="text-lg text-gray-300 mb-8 w-1/2 mx-auto text-center py-4">
               Explore some of my recent video projects that showcase my expertise in video editing. From cinematic storytelling to precise editing, each piece reflects my commitment to creating compelling and high-quality visual content. Whether it&apos;s a brand promotion, a creative short film, or a personal project, I bring creativity and technical skill to every edit to ensure a captivating final product.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="col-span-1 lg:col-span-2 row-span-2">
                 <iframe
                   width="100%"
@@ -171,7 +172,7 @@ export default function Home() {
                   className="object-cover"
                 ></iframe>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
 
