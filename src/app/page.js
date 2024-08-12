@@ -90,91 +90,51 @@ export default function Home() {
             </div>
           </div>
         </section>
+<section className="py-32 text-white">
+  <div className="container mx-auto px-4 w-full md:w-3/4 lg:w-1/2 mx-auto">
+    <h2 className="text-4xl font-semibold mb-8 text-center">Work Visuals</h2>
+    <p className="text-lg text-gray-300 mb-12 w-full mx-auto text-center">
+      Explore some of my recent video projects that showcase my expertise in video editing. From cinematic storytelling to precise editing, each piece reflects my commitment to creating compelling and high-quality visual content. Whether it&apos;s a brand promotion, a creative short film, or a personal project, I bring creativity and technical skill to every edit to ensure a captivating final product.
+    </p>
 
-        <section className="py-32" data-aos="fade-up">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-semibold mb-8 text-center">Work Visuals</h2>
-            <p className="text-lg text-gray-300 mb-8 w-1/2 mx-auto text-center py-4">
-              Explore some of my recent video projects that showcase my expertise in video editing. From cinematic storytelling to precise editing, each piece reflects my commitment to creating compelling and high-quality visual content. Whether it&apos;s a brand promotion, a creative short film, or a personal project, I bring creativity and technical skill to every edit to ensure a captivating final product.
-            </p>
-            {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="col-span-1 lg:col-span-2 row-span-2">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/8DFUTH7LWhM"
-                  title="Video 1"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="object-cover"
-                ></iframe>
-              </div>
-              <div className="col-span-1">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/4N6V3Z76CTc"
-                  title="Video 2"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="object-cover"
-                ></iframe>
-              </div>
-              <div className="col-span-1">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/n-jXmEi42qc"
-                  title="Video 3"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="object-cover"
-                ></iframe>
-              </div>
-              <div className="col-span-1 lg:col-span-2 row-span-2">
-  <iframe
-    width="100%"
-    height="100%"
-    src="https://www.youtube.com/embed/rVVIeVCnYk0"
-    title="Video 4"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-    className="object-cover"
-  ></iframe>
-</div>
-
-<div className="col-span-1">
-  <iframe
-    width="100%"
-    height="100%"
-    src="https://www.youtube.com/embed/q4gZ6JDn4-E"
-    title="Video 5"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-    className="object-cover"
-  ></iframe>
-</div>
-
-              <div className="col-span-1">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/BwPEU9BE644"
-                  title="Video 6"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="object-cover"
-                ></iframe>
-              </div>
-            </div> */}
+    <div className="space-y-12">
+      {[
+        { src: "https://www.youtube.com/embed/8DFUTH7LWhM", title: "Video 1", description: "Video 1 description goes here. This video covers important topics related to the subject." },
+        { src: "https://www.youtube.com/embed/4N6V3Z76CTc", title: "Video 2", description: "Video 2 description goes here. This video offers insights into a specific aspect of the topic." },
+        { src: "https://www.youtube.com/embed/n-jXmEi42qc", title: "Video 3", description: "Video 3 description goes here. This video provides a detailed explanation of a concept." },
+        { src: "https://www.youtube.com/embed/rVVIeVCnYk0", title: "Video 4", description: "Video 4 description goes here. This video dives into an advanced topic in the field." },
+        { src: "https://www.youtube.com/embed/q4gZ6JDn4-E", title: "Video 5", description: "Video 5 description goes here. This video explores practical applications of the theory." },
+        { src: "https://www.youtube.com/embed/BwPEU9BE644", title: "Video 6", description: "Video 6 description goes here. This video concludes with key takeaways and summary points." }
+      ].map((video, index) => (
+        <div className={`flex flex-col ${index % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'} gap-6`} key={index}>
+          <div className="relative w-full sm:w-1/2 h-60">
+            <iframe
+              width="100%"
+              height="100%"
+              src={video.src}
+              title={video.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 object-cover rounded-lg"
+            ></iframe>
           </div>
-        </section>
+          <div className="flex items-center sm:w-1/2">
+            <div className="relative p-6 rounded-lg w-full  bg-opacity-10 shadow-lg  overflow-hidden">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-24 h-24 "></div>
+              </div>
+              <p className="w-full max-w-sm p-6 rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 testimonial-card" data-aos="fade-up" data-aos-delay="200">{video.description}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
 
         <section className="py-32" data-aos="fade-up">
           <div className="container mx-auto px-4 text-center">
