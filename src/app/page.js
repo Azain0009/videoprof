@@ -1,21 +1,20 @@
 'use client';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useInView } from 'react-intersection-observer';
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 import { SiAdobeaftereffects, SiAdobepremierepro, SiDavinciresolve, SiAdobephotoshop, SiAdobelightroom } from 'react-icons/si';
 
 export default function Home() {
   const { ref: headerRef, inView: headerInView } = useInView({
     triggerOnce: true,
-    threshold: 0.1, // Adjust this based on when you want to trigger the animation
+    threshold: 0.1,
   });
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration
-      once: true, // Whether animation should happen only once
+      duration: 1000,
+      once: true,
     });
   }, []);
 
@@ -59,7 +58,7 @@ export default function Home() {
                 I craft bespoke video edits for individuals and brands
               </p>
               <a href="mailto:azainxc@gmail.com" className="mt-6 inline-block rounded-lg bg-white text-black p-3 transition-transform duration-300 ease-in-out transform hover:bg-black hover:text-white hover:scale-110" data-aos="fade-up" data-aos-delay="400">
-                Let's Collaborate
+                Let&apos;s Collaborate
               </a>
             </div>
           </div>
@@ -95,7 +94,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-semibold mb-8 text-center">Work Visuals</h2>
             <p className="text-lg text-gray-300 mb-8 w-1/2 mx-auto text-center py-4">
-              Explore some of my recent video projects that showcase my expertise in video editing. From cinematic storytelling to precise editing, each piece reflects my commitment to creating compelling and high-quality visual content. Whether it’s a brand promotion, a creative short film, or a personal project, I bring creativity and technical skill to every edit to ensure a captivating final product.
+              Explore some of my recent video projects that showcase my expertise in video editing. From cinematic storytelling to precise editing, each piece reflects my commitment to creating compelling and high-quality visual content. Whether it&apos;s a brand promotion, a creative short film, or a personal project, I bring creativity and technical skill to every edit to ensure a captivating final product.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="col-span-1 lg:col-span-2 row-span-2">
@@ -184,28 +183,24 @@ export default function Home() {
         </section>
 
         <section className="py-32" data-aos="fade-up">
-  <div className="container mx-auto px-4 text-center">
-    <h2 className="text-4xl font-semibold mb-8">Client Testimonials</h2>
-    <div className="relative flex flex-wrap justify-center gap-8 py-4">
-      <div className="w-full max-w-sm p-6 rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 testimonial-card" data-aos="fade-up" data-aos-delay="100">
-        <p className="text-gray-300 mb-4">
-          "Azain Akil's work is exceptional. His attention to detail and creative vision brought our project to life in ways we never imagined. Highly recommend!"
-        </p>
-        <p className="font-semibold text-white">Nikhil Naik</p>
-        {/* <p className="text-gray-400">CEO, Tech Innovations</p> */}
-      </div>
-      <div className="w-full max-w-sm p-6 rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 testimonial-card" data-aos="fade-up" data-aos-delay="200">
-        <p className="text-gray-300 mb-4">
-          "Working with Azain has been a game-changer for our brand. His video edits are not only high quality but also perfectly align with our vision and goals."
-        </p>
-        <p className="font-semibold text-white">Shreesh</p>
-        {/* <p className="text-gray-400">Creative Director, Artistry Co.</p> */}
-      </div>
-    </div>
-  </div>
-</section>
-
-
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-semibold mb-8">Client Testimonials</h2>
+            <div className="relative flex flex-wrap justify-center gap-8 py-4">
+              <div className="w-full max-w-sm p-6 rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <p className="text-gray-300 mb-4">
+                  &quot;Azain Akil&apos;s work is exceptional. His attention to detail and creative vision brought our project to life in ways we never imagined. Highly recommend!&quot;
+                </p>
+                <p className="font-semibold text-white">Nikhil Naik</p>
+              </div>
+              <div className="w-full max-w-sm p-6 rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                <p className="text-gray-300 mb-4">
+                  &quot;Working with Azain has been a game-changer for our brand. His video edits are not only high quality but also perfectly align with our vision and goals.&quot;
+                </p>
+                <p className="font-semibold text-white">Shreesh</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section className="py-32" data-aos="fade-up">
           <div className="container mx-auto px-4 text-center">
