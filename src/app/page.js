@@ -24,45 +24,42 @@ export default function Home() {
         body {
           font-family: 'Helvetica', 'Arial', sans-serif;
         }
-        @keyframes slideToCenter {
-          from {
-            transform: translateX(-100%);
-            opacity: 0;
-          }
-          to {
-            transform: translateX(0);
-            opacity: 1;
-          }
-        }
-        .scroll-slide {
-          transform: translateX(-100%);
-          opacity: 0;
-          transition: transform 1s ease-out, opacity 1s ease-out;
-        }
-        .scroll-slide.show {
-          transform: translateX(0);
-          opacity: 1;
-        }
+        
       `}</style>
       <div className="bg-[#020410] text-white">
       <header className="py-32 h-screen flex items-center px-4 relative" data-aos="fade-up">
   <div className="absolute inset-0 flex justify-center items-center -z-10">
-    <div className="absolute left-1/4 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-radial"></div>
+    <div className="absolute left-1/4 w-80 h-80 bg-gradient-radial"></div>
   </div>
   <div className="w-full max-w-screen-xl mx-auto text-center relative">
     <div className="w-full px-2 md:text-left">
-      <h1 className={`text-3xl md:text-9xl text-white scroll-slide ${headerInView ? 'show' : ''}`} ref={headerRef}>
+      <h1 
+        className="text-6xl md:text-9xl text-white bold"
+        ref={headerRef}
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
         Azain Akil
       </h1>
-      <p className={`text-3xl mb-8 md:text-3xl mt-4 text-white scroll-slide ${headerInView ? 'show' : ''}`}>
+      <p 
+        className="text-3xl mb-8 md:text-3xl mt-4 text-white scroll-slide"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
         I craft bespoke video edits for individuals and brands
       </p>
-      <a href="mailto:azainxc@gmail.com" className="mt-6 inline-block rounded-lg bg-white text-black p-3 transition-transform duration-300 ease-in-out transform hover:bg-black hover:text-white hover:scale-110" data-aos="fade-up" data-aos-delay="400">
+      <a 
+        href="mailto:azainxc@gmail.com" 
+        className="mt-6 inline-block rounded-lg bg-white text-black p-3 hover:bg-black hover:text-white hover:scale-110"
+        data-aos="fade-up"
+        data-aos-delay="400"
+      >
         Let&apos;s Collaborate
       </a>
     </div>
   </div>
 </header>
+
 
 
         <section className="py-32" data-aos="fade-up">
@@ -99,12 +96,11 @@ export default function Home() {
 
     <div className="space-y-12">
       {[
-        { src: "https://www.youtube.com/embed/8DFUTH7LWhM", title: "Video 1", description: "Video 1 description goes here. This video covers important topics related to the subject." },
-        { src: "https://www.youtube.com/embed/4N6V3Z76CTc", title: "Video 2", description: "Video 2 description goes here. This video offers insights into a specific aspect of the topic." },
-        { src: "https://www.youtube.com/embed/n-jXmEi42qc", title: "Video 3", description: "Video 3 description goes here. This video provides a detailed explanation of a concept." },
-        { src: "https://www.youtube.com/embed/rVVIeVCnYk0", title: "Video 4", description: "Video 4 description goes here. This video dives into an advanced topic in the field." },
-        { src: "https://www.youtube.com/embed/q4gZ6JDn4-E", title: "Video 5", description: "Video 5 description goes here. This video explores practical applications of the theory." },
-        { src: "https://www.youtube.com/embed/BwPEU9BE644", title: "Video 6", description: "Video 6 description goes here. This video concludes with key takeaways and summary points." }
+        { src: "https://www.youtube.com/embed/8DFUTH7LWhM", title: "Video 1", description: "This video about cryptocurrency features engaging subtitles that highlight key concepts and make the content accessible. The audio design is crisp and dynamic, helping to maintain viewer interest while reinforcing the fast-paced, innovative nature of the crypto world. The combination of visuals, subtitles, and sound creates an informative and captivating viewing experience." },
+        { src: "https://www.youtube.com/embed/4N6V3Z76CTc", title: "Video 2", description: "This video introduces the investment app with sleek 2D animations and graphics created in After Effects. The visuals are designed to simplify complex concepts, making the app's features easy to understand. The animation flows smoothly, guiding viewers through the app’s key benefits and functionality, creating an engaging and informative introduction." },
+        { src: "https://www.youtube.com/embed/n-jXmEi42qc", title: "Video 3", description: "In this video introducing Nikhil Naik, I combined dynamic graphics, precise subtitles, and custom sound design to create an engaging and polished presentation. The graphics highlight key points, while the subtitles ensure clarity. The sound design complements the visuals, enhancing the overall impact of the introduction." },
+        { src: "https://www.youtube.com/embed/q4gZ6JDn4-E", title: "Video 5", description: "For this short documentary, I crafted an immersive experience with carefully timed subtitles that enhance accessibility and engagement. Tailored sound design matched the emotional tone, using ambient sounds to elevate the storytelling. Visual effects, including title sequences and motion graphics, were created in After Effects to add depth to the narrative." },
+        { src: "https://www.youtube.com/embed/BwPEU9BE644", title: "Video 6", description: "In this video, a compelling story is narrated using carefully selected stock footage, with subtitles added to ensure the message resonates with all viewers. Film burn effects are incorporated to give the video a nostalgic and cinematic feel, enhancing the overall mood and storytelling experience." }
       ].map((video, index) => (
         <div className={`flex flex-col ${index % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'} gap-6`} key={index}>
           <div className="relative w-full sm:w-1/2 h-60">
